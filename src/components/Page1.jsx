@@ -7,14 +7,14 @@ export default function Page1(props) {
         <div className="lannding-page" style={props.page1}>
           <div className="heading">
             <div className="img">
-              <img src="Images/cherry.png" alt="" />
+              <img src={props.can} alt="" />
             </div>
             <h1>CALSSIC CRAFT DRINKS,</h1>
             <br />
             <h1>ENERGY WITHOUT,</h1>
             <br />
             <div className="thirdline">
-              <h1>FUSS</h1>
+              <h1 style={{ color: `${props.theme}` }}>FUSS</h1>
             </div>
           </div>
           <div className="bottom-border">
@@ -22,7 +22,7 @@ export default function Page1(props) {
           </div>
           <div className="arrow">
             <div className="leftarrow">
-              {/* <!-- <img src="Images/Arrow2.png" alt=""> --> */}
+              <img src="Images/Arrow2.png" alt="" />
               <p>
                 ENJOY THE <br /> FLAVOUR
               </p>
@@ -31,7 +31,7 @@ export default function Page1(props) {
               <p>
                 WITH ZERO <br /> SUGAR
               </p>
-              {/* <!-- <img src="Images/arrow.png" alt=""> --> */}
+              <img src="Images/arrow.png" alt="" />
             </div>
           </div>
         </div>
@@ -41,5 +41,8 @@ export default function Page1(props) {
 }
 
 Page1.propTypes = {
-  page1: PropTypes.object.isRequired, // Enforces page1 to be an object
+  page1: PropTypes.object.isRequired,
+  theme: PropTypes.string.isRequired,
+  can: PropTypes.string.isRequired, // Enforces page1 to be an object
+  // Enforces page1 to be an object
 };

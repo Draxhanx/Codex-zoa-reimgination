@@ -1,4 +1,6 @@
-export default function Navbar() {
+import { PropTypes } from "prop-types";
+
+export default function Navbar(props) {
   return (
     <>
       <div className="navbar">
@@ -18,7 +20,7 @@ export default function Navbar() {
           </div>
           <div className="right-navbar">
             <div className="btn">
-              <a href="#">
+              <a href="#" style={{ backgroundColor: `${props.theme}` }}>
                 ORDER NOW <i className="ri-arrow-right-fill"></i>
               </a>
             </div>
@@ -38,3 +40,7 @@ export default function Navbar() {
     </>
   );
 }
+
+Navbar.propTypes = {
+  theme: PropTypes.string.isRequired, // Enforces page1 to be an object
+};
