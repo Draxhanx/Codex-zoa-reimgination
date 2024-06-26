@@ -1,6 +1,46 @@
 import { PropTypes } from "prop-types";
+import { useState } from "react";
 
 export default function Page2(props) {
+  const [value, setValue] = useState(1);
+  const canFirstNames = ["SUPER", "STRAWBERRY", "FROZEN", "WILD", "PINEAPLLE"];
+  const canSecondNames = ["BERRY", "WATERMELON", "GRAPE", "ORANGE", "COCONUT"];
+
+  const [firstName, setFirstName] = useState(canFirstNames[props.number]);
+  const [secondName, setSecondName] = useState(canSecondNames[props.number]);
+
+  function changeNextCan() {
+    if (value >= 5) {
+      let temp = 1;
+      setValue(temp);
+      setFirstName(canFirstNames[temp - 1]);
+      setSecondName(canSecondNames[temp - 1]);
+      props.nextTheme(temp - 1);
+    } else {
+      let temp = value + 1;
+      setValue(temp);
+      setFirstName(canFirstNames[temp - 1]);
+      setSecondName(canSecondNames[temp - 1]);
+      props.nextTheme(temp - 1);
+    }
+  }
+
+  function changePrevCan() {
+    if (value <= 1) {
+      let temp = 5;
+      setValue(temp);
+      setFirstName(canFirstNames[temp - 1]);
+      setSecondName(canSecondNames[temp - 1]);
+      props.nextTheme(temp - 1);
+    } else {
+      let temp = value - 1;
+      setValue(temp);
+      setFirstName(canFirstNames[temp - 1]);
+      setSecondName(canSecondNames[temp - 1]);
+      props.nextTheme(temp - 1);
+    }
+  }
+
   return (
     <>
       <div className="page2">
@@ -13,16 +53,10 @@ export default function Page2(props) {
             </div>
             <div className="flavour">
               <div className="first-line">
-                <h1>STRAWBERRY</h1>
-                <h1>FROZEN</h1>
-                <h1>WILD</h1>
-                <h1>PINEAPLLE</h1>
+                <h1>{firstName}</h1>
               </div>
               <div className="second-line">
-                <h1>WATERMELON</h1>
-                <h1>GRAPE</h1>
-                <h1>ORANGE</h1>
-                <h1>COCONUT</h1>
+                <h1>{secondName}</h1>
               </div>
             </div>
             <div className="neat-weight">
@@ -40,17 +74,11 @@ export default function Page2(props) {
             <div className="heading-p">
               <div className="heading-p-first-line">
                 <p>
-                  GET CARRIED WITH YOUR <span>STRAWBERRY WATERMELON</span>{" "}
+                  GET CARRIED WITH YOUR{" "}
+                  <span style={{ color: `${props.theme}` }}>
+                    {firstName} {secondName}
+                  </span>{" "}
                   DRINK.
-                </p>
-                <p>
-                  GET CARRIED WITH YOUR <span>FROZEN GRAPE</span> DRINK.
-                </p>
-                <p>
-                  GET CARRIED WITH YOUR <span>WILD ORANGE</span> DRINK.
-                </p>
-                <p>
-                  GET CARRIED WITH YOUR <span>PINEAPPLE COCONUT</span> DRINK.
                 </p>
               </div>
               <h4>
@@ -73,7 +101,7 @@ export default function Page2(props) {
               </div>
             </div>
             <div className="dicover-btn">
-              <a href="#">
+              <a href="#" style={{ backgroundColor: `${props.theme}` }}>
                 DISCOVER-MORE <i className="ri-arrow-right-fill"></i>
               </a>
             </div>
@@ -84,53 +112,31 @@ export default function Page2(props) {
                 <div className="img2">
                   <div className="img3">
                     <div className="strawberry2">
-                      <img src="Images/cherry.png" alt="" />
-                    </div>
-                    <div className="grape">
-                      <img src="Images/grape.png" alt="" />
-                    </div>
-                    <div className="orange">
-                      <img src="Images/orange.png" alt="" />
-                    </div>
-                    <div className="pineapple">
-                      <img src="Images/pineapple.png" alt="" />
+                      <img src={`${props.can}`} alt="" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="nest-prev">
-              <div className="prev-btn">
-                <a href="#">
-                  <i className="ri-arrow-left-fill"></i>
-                </a>
+              <div className="prev-btn" onClick={changePrevCan}>
+                <i className="ri-arrow-left-fill"></i>
               </div>
               <div className="middle-info">
                 <div className="pages">
-                  <p>1/4</p>
-                  <p>2/4</p>
-                  <p>3/4</p>
-                  <p>4/4</p>
+                  <p>{value}/5</p>
                 </div>
                 <div className="name">
                   <div className="name-first-line">
-                    <h3>STRAWBERRY</h3>
-                    <h3>FROZEN</h3>
-                    <h3>WILD</h3>
-                    <h3>PINEAPLLE</h3>
+                    <h3>{firstName}</h3>
                   </div>
                   <div className="name-second-line">
-                    <h3> WATERMELON</h3>
-                    <h3>GRAPE</h3>
-                    <h3>ORANGE</h3>
-                    <h3>COCONUT</h3>
+                    <h3>{secondName}</h3>
                   </div>
                 </div>
               </div>
-              <div className="next-btn">
-                <a href="#">
-                  <i className="ri-arrow-right-fill"></i>
-                </a>
+              <div className="next-btn" onClick={changeNextCan}>
+                <i className="ri-arrow-right-fill"></i>
               </div>
             </div>
           </div>
@@ -141,5 +147,9 @@ export default function Page2(props) {
 }
 
 Page2.propTypes = {
-  page2: PropTypes.object.isRequired, // Enforces page1 to be an object
+  page2: PropTypes.object.isRequired,
+  can: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
+  number: PropTypes.number.isRequired,
+  nextTheme: PropTypes.func.isRequired, // Enforces page1 to be an object
 };
