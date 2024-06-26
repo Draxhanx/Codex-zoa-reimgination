@@ -13,12 +13,12 @@ body {
 
 @font-face {
   font-family: fre;
-  src: local(fre), url('./components/Fonts/Freudian\ One\ Demo.ttf') format('.ttf');
+  src: local(fre), url('./assets/Fonts/Freudian\ One\ Demo.ttf') format('.ttf');
 }
 
 @font-face {
   font-family: Rashford;
-  src: local(Rashford), url('./Fonts/ROSEFORD\ DEMO.ttf') format('.ttf');
+  src: local(Rashford), url('./assets/Fonts/ROSEFORD\ DEMO.ttf') format('.ttf');
 }
 
 .main {
