@@ -6,6 +6,8 @@ import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
 import Page4 from "./components/Page4";
 import RoundedText from "./components/RoundedText";
+import Page5 from "./components/Page5";
+import Page6 from "./components/Page6";
 
 function App() {
   const themeColors = ["#f7931a", "#7ecf86", "#f9a730", "#019735", "#9A5D2A"];
@@ -38,20 +40,11 @@ function App() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  // function setColors(value) {
-  //   setPage1(page1Colors[value]);
-  //   setPage2(page2Colors[value]);
-  // }
-
   const randomNumber = getRandomNumber(0, 4);
 
   const [page1, setPage1] = useState(page1Colors[randomNumber]);
 
   const [page2, setPage2] = useState(page2Colors[randomNumber]);
-
-  const [page3, setPage3] = useState(page2Colors[randomNumber]);
-
-  const [page4, setPage4] = useState(page2Colors[randomNumber]);
 
   const [theme, setTheme] = useState(themeColors[randomNumber]);
 
@@ -61,8 +54,6 @@ function App() {
     setTheme(themeColors[value]);
     setPage1(page1Colors[value]);
     setPage2(page2Colors[value]);
-    setPage3(page2Colors[value]);
-    setPage4(page2Colors[value]);
     setCan(canImages[value]);
   };
 
@@ -79,8 +70,10 @@ function App() {
           number={randomNumber}
           nextTheme={nextTheme}
         />
-        <Page3 page3={page3} theme={theme} />
-        <Page4 page4={page4} theme={theme} />
+        <Page3 page3={page2} theme={theme} />
+        <Page4 page4={page2} theme={theme} />
+        <Page5 page5={page2} theme={theme} />
+        <Page6 page6={page2} theme={theme} />
       </div>
     </>
   );
