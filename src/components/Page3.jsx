@@ -12,20 +12,35 @@ function Page3(props) {
             <div className="child-canvas">
               <div className="images-con">
                 <div className="img-con-2">
-                  <div className="berry">
-                    <img src="Images/BERRY.png" alt="" />
+                  <div className="tropical-punch">
+                    <div className="berry">
+                      <img src="Images/BERRY.png" alt="" />
+                    </div>
+                    <h3>TROPICAL <br /> PUNCH</h3>
                   </div>
-                  <div className="cherry1">
-                    <img src="Images/cherry.png" alt="" />
+                  <div className="strawberry-watermelon">
+                    <div className="cherry1">
+                      <img src="Images/cherry.png" alt="" />
+                    </div>
+                    <h3>STRAWBERRY <br /> WATERMELON</h3>
                   </div>
-                  <div className="pinapple1">
-                    <img src="Images/pineapple.png" alt="" />
+                  <div className="pineapple-coconut">
+                    <div className="pinapple1">
+                      <img src="Images/pineapple.png" alt="" />
+                    </div>
+                    <h3>PINEAPLLE <br /> COCONUT</h3>
                   </div>
-                  <div className="grape1">
-                    <img src="Images/grape.png" alt="" />
+                  <div className="frozen-grape">
+                    <div className="grape1">
+                      <img src="Images/grape.png" alt="" />
+                    </div>
+                    <h3>FROZEN <br /> GRAPE</h3>
                   </div>
-                  <div className="orange1">
-                    <img src="Images/orange.png" alt="" />
+                  <div className="wild-orange">
+                    <div className="orange1">
+                      <img src="Images/orange.png" alt="" />
+                    </div>
+                    <h3>WILD <br /> ORANGE</h3>
                   </div>
                 </div>
               </div>

@@ -13,7 +13,7 @@ body {
 
 @font-face {
   font-family: fre;
-  src: local(fre), url('./Fonts/Freudian\ One\ Demo.ttf') format('.ttf');
+  src: local(fre), url('./components/Fonts/Freudian\ One\ Demo.ttf') format('.ttf');
 }
 
 @font-face {
@@ -1679,7 +1679,7 @@ body {
 }
 
 .page5{
-  height: 120vh;
+  height: 125vh;
   width: 100vw;
   background-image: linear-gradient(#f25b60, #d73c48, #d43643);
   position: relative;
@@ -1690,6 +1690,7 @@ body {
   font-size: 30px;
   margin: auto;
   font-family: fre;
+  color: #f8f7e5;
   padding-left: 2vw;
 }
 
@@ -1710,7 +1711,6 @@ body {
 .first-row{
   height: 300px;
   width: 300px;
-  background-color: yellow;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1726,7 +1726,6 @@ body {
 .second-row{
   height: 530px;
   width: 300px;
-  background-color: yellow;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1751,7 +1750,6 @@ body {
 .third-row{
   height: 300px;
   width: 300px;
-  background-color: yellow;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1770,7 +1768,6 @@ body {
 .fourth-row{
   height: 300px;
   width: 300px;
-  background-color: yellow;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1789,7 +1786,6 @@ body {
 .fifth-row{
   height: 530px;
   width: 300px;
-  background-color: yellow;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1806,9 +1802,137 @@ body {
 }
 
 .page6{
-  height: 120vh;
+  height: 80vh;
   width: 100vw;
   background-image: linear-gradient(#f25b60, #d73c48, #d43643);
   margin-top: -15vh;
+}
+
+.footer{
+  height: 100%;
+  width: 98%;
+  margin: auto;
+  display: flex;
+}
+
+.left-part{
+  height:80%;
+  width: 60%;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+  /* background-color: aqua; */
+}
+
+.right-part{
+  width: 40%;
+  height: 81.4%;
+  background-color: #7ecf86;
+  margin-top: 15vh;
+}
+
+.page6-img{
+  position: relative;
+}
+
+.page6-img img{
+  position: absolute;
+  height: 350px;
+  top: 20vh;
+  left: -13vw;
+}
+
+.left-part1{
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.left-part1 h3{
+  font-size: 20px;
+  font-family: fre;
+  font-weight: 400;
+  color: #f8f7e5;
+}
+
+.leftpart1-icons{
+  display: flex;
+  gap: 1vw;
+}
+
+.leftpart1-icons{
+  color: #f8f7e5;
+  font-size: 20px;
+}
+
+.left-part2{
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  text-align: center;
+}
+
+.left-part2 h3{
+  font-size: 20px;
+  font-family: fre;
+  font-weight: 400;
+  color: #f8f7e5;
+  margin-bottom: 1vh;
+}
+
+.left-part2 a{
+  font-size: 16px;
+  font-family: fre;
+  font-weight: 400;
+  color: #0f0f0f;
+  text-decoration: none;
+}
+
+.left-part3{
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+.left-part3 h3{
+  font-size: 20px;
+  color: #f8f7e5;
+}
+
+.left-part3 a{
+  font-size: 16px;
+  color: #0f0f0f;
+  text-decoration: none;
+}
+
+.right-part h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 120px;
+  color: #0f0f0fa4;
+}
+
+.tropical-punch{
+  text-align: center;
+}
+
+.strawberry-watermelon{
+  text-align: center;
+}
+
+.pineapple-coconut{
+  text-align: center;
+}
+
+.frozen-grape{
+  text-align: center;
+}
+
+.wild-orange{
+  text-align: center;
 }
 
