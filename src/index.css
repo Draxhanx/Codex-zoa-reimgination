@@ -1706,6 +1706,7 @@ body {
   padding-right: 2vw;
   padding-top: 2vh;
   gap: 2vw;
+  margin: auto;
 }
 
 .first-row{
