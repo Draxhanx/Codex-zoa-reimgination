@@ -35,6 +35,13 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      <div className="res-navbar">
+        <div className="re-navbar-con">
+          <div className="res-logo">
+            <h3>ZOAENERGY</h3>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

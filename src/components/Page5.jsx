@@ -10,21 +10,38 @@ function Page5() {
             </div>
             <div className="insta-feed">
                 <div className="first-row">
-                    <img src="Images/insta1.png" alt="" />
+                    {/* <img src="Images/insta1.png" alt="" /> */}
+                    <video src="VEDIOS/vedio1.mp4" autoPlay loop muted></video>
+                    <div className="first-row-i">
+                        <i className="ri-instagram-line"></i>
+                    </div>
                 </div>
                 <div className="second-row">
                     <img src="Images/insta2.jpg" alt="" />
+                    <div className="second-row-i">
+                        <i className="ri-instagram-line"></i>
+                    </div>
                 </div>
                 <div className="third-main">
                     <div className="third-row">
-                        <img src="Images/insta3.png" alt="" />
+                        {/* <img src="Images/insta3.png" alt="" /> */}
+                        <video src="VEDIOS/vedio2.mp4" muted loop autoPlay></video>
+                        <div className="third-row-i">
+                            <i className="ri-instagram-line"></i>
+                        </div>
                     </div>
                     <div className="fourth-row">
                         <img src="Images/insta4.png" alt="" />
+                        <div className="fourth-row-i">
+                            <i className="ri-instagram-line"></i>
+                        </div>
                     </div>
                 </div>
                 <div className="fifth-row">
                     <img src="Images/intsa5.png" alt="" />
+                    <div className="fifth-row-i">
+                        <i className="ri-instagram-line"></i>
+                    </div>
                 </div>
             </div>
         </div>

@@ -13,12 +13,22 @@ body {
 
 @font-face {
   font-family: fre;
-  src: local(fre), url('./assets/Fonts/Freudian\ One\ Demo.ttf') format('.ttf');
+  src:url('../public/Fonts/Freudian\ One\ Demo.ttf');
 }
 
 @font-face {
   font-family: Rashford;
-  src: local(Rashford), url('./assets/Fonts/ROSEFORD\ DEMO.ttf') format('.ttf');
+  src:url('../public/Fonts/ROSEFORD\ DEMO.ttf');
+}
+
+@font-face {
+  font-family: monu;
+  src: url('../public/Fonts/MonumentExtended-Regular\ \(1\).ttf');
+}
+
+@font-face {
+  font-family: gilroy;
+  src: url('../public/Fonts/Gilroy-Medium.ttf');
 }
 
 .main {
@@ -84,7 +94,7 @@ body {
   font-size: 17px;
   text-decoration: none;
   font-weight: 400;
-  font-family: fre;
+  font-family: gilroy;
 }
 
 .network {
@@ -102,8 +112,8 @@ body {
 
 .btn a {
   font-size: 16px;
-  font-family: fre;
-  font-weight: 100;
+  font-family: gilroy;
+  font-weight: 600;
   color: #000;
   text-decoration: none;
   border-radius: 50px;
@@ -132,7 +142,7 @@ body {
 
 .hamburger p {
   font-size: 15px;
-  font-family: fre;
+  font-family: gilroy;
   color: #fff;
   font-weight: 400;
   cursor: pointer;
@@ -429,8 +439,8 @@ body {
 .heading-p h4 {
   margin-top: 3vh;
   font-size: 15px;
-  font-family: Rashford;
-  font-weight: 400;
+  font-family: gilroy;
+  font-weight: 600;
   color: #010101;
 }
 
@@ -617,6 +627,8 @@ body {
   font-size: 25px;
   font-family: Rashford;
   color: #161616;
+  height: auto;
+  width: 20vw;
 }
 
 .name-first-line {
@@ -1687,11 +1699,13 @@ body {
 }
 
 .page5-haeding{
-  font-size: 30px;
+  font-size: 20px;
   margin: auto;
-  font-family: fre;
+  font-family: Rashford;
   color: #f8f7e5;
   padding-left: 2vw;
+  height: auto;
+  width: 80%;
 }
 
 .page5-haeding span{
@@ -1707,6 +1721,7 @@ body {
   padding-top: 2vh;
   gap: 2vw;
   margin: auto;
+  width: 90%;
 }
 
 .first-row{
@@ -1717,11 +1732,42 @@ body {
   border-bottom-left-radius: 20px;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
 }
 
-.first-row img{
-  height: 300px;
+.first-row:hover{
+  .first-row-i{
+    display: block;
+  }
+}
+
+.first-row-i{
+  display: none;
+}
+
+.first-row i{
+  font-size: 20px;
+  position: absolute;
+  color: #f8f7e5;
+  top: 0%; 
+  left: 0%;
   width: 300px;
+  height: 300px;
+  background-color: #00000025;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-row video{
+  height: 100%;
+  /* width: 400px; */
+  background-position: calc(50%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .second-row{
@@ -1732,6 +1778,34 @@ body {
   border-bottom-left-radius: 20px;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
+}
+
+.second-row:hover{
+  .second-row-i{
+    display: block;
+  }
+}
+
+.second-row-i{
+  display: none;
+}
+
+.second-row i{
+  font-size: 20px;
+  position: absolute;
+  color: #f8f7e5;
+  top: 0%; 
+  left: 0%;
+  width: 300px;
+  height: 530px;
+  background-color: #00000025;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .second-row img{
@@ -1748,6 +1822,33 @@ body {
   gap: 2vh;
 }
 
+.third-row:hover{
+  .third-row-i{
+    display: block;
+  }
+}
+
+.third-row-i{
+  display: none;
+}
+
+.third-row i{
+  font-size: 20px;
+  position: absolute;
+  color: #f8f7e5;
+  top: 0%; 
+  left: 0%;
+  width: 300px;
+  height: 300px;
+  background-color: #00000025;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .third-row{
   height: 300px;
   width: 300px;
@@ -1756,14 +1857,15 @@ body {
   border-bottom-left-radius: 20px;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
 }
 
-.third-row img{
-  height: 300px;
+.third-row video{
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 300px;
+  /* width: 100%; */
 }
 
 .fourth-row{
@@ -1774,6 +1876,34 @@ body {
   border-bottom-left-radius: 20px;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
+}
+
+.fourth-row:hover{
+  .fourth-row-i{
+    display: block;
+  }
+}
+
+.fourth-row-i{
+  display: none;
+}
+
+.fourth-row i{
+  font-size: 20px;
+  position: absolute;
+  color: #f8f7e5;
+  top: 0%; 
+  left: 0%;
+  width: 300px;
+  height: 300px;
+  background-color: #00000025;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fourth-row img{
@@ -1792,6 +1922,34 @@ body {
   border-bottom-left-radius: 20px;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
+}
+
+.fifth-row:hover{
+  .fifth-row-i{
+    display: block;
+  }
+}
+
+.fifth-row-i{
+  display: none;
+}
+
+.fifth-row i{
+  font-size: 20px;
+  position: absolute;
+  color: #f8f7e5;
+  top: 0%; 
+  left: 0%;
+  width: 300px;
+  height: 530px;
+  background-color: #00000025;
+  position: absolute;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fifth-row img{
@@ -1885,8 +2043,8 @@ body {
 
 .left-part2 a{
   font-size: 16px;
-  font-family: fre;
-  font-weight: 400;
+  font-family: gilroy;
+  font-weight: 600;
   color: #0f0f0f;
   text-decoration: none;
 }
@@ -1895,17 +2053,23 @@ body {
   display: flex;
   align-items: center;
   gap: 4vw;
+  text-align: center;
 }
 
 .left-part3 h3{
   font-size: 20px;
   color: #f8f7e5;
+  font-family: fre;
+  font-weight: 100;
 }
 
 .left-part3 a{
   font-size: 16px;
   color: #0f0f0f;
   text-decoration: none;
+  font-family: gilroy;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .right-part h1{
@@ -1921,19 +2085,88 @@ body {
   text-align: center;
 }
 
+.tropical-punch h3{
+  font-size: 20px;
+  color: #f8f8f8;
+  font-family: Rashford;
+  font-weight: 100;
+}
+
 .strawberry-watermelon{
   text-align: center;
+}
+
+.strawberry-watermelon h3{
+  font-size: 20px;
+  color: #f8f8f8;
+  font-family: Rashford;
+  font-weight: 100;
 }
 
 .pineapple-coconut{
   text-align: center;
 }
 
+.pineapple-coconut h3{
+  font-size: 20px;
+  color: #f8f8f8;
+  font-family: Rashford;
+  font-weight: 100;
+}
+
 .frozen-grape{
   text-align: center;
+}
+
+.frozen-grape h3{
+  font-size: 20px;
+  color: #f8f8f8;
+  font-family: Rashford;
+  font-weight: 100;
 }
 
 .wild-orange{
   text-align: center;
 }
 
+.wild-orange h3{
+  font-size: 20px;
+  color: #f8f8f8;
+  font-family: Rashford;
+  font-weight: 100;
+}
+
+@media screen and (min-width:640px) {
+  .res-navbar{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width:640px) {
+  .navbar{
+    display: none;
+  }
+  .res-navbar{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    background-color: green;
+    align-items: center;
+  }
+
+  .re-navbar-con{
+    height: 100%;
+    width: 98%;
+    margin: auto;
+    background-color: green;
+    display: flex;
+    align-items: center;
+  }
+
+  .res-logo h3{
+    font-family: monu;
+    font-size: 20px;
+    color: #f8f7e5;
+  }
+}
