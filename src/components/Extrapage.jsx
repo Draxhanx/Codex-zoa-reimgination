@@ -85,6 +85,14 @@ const Extrapage = () => {
                         </div> */}
                     </div>
                 </div>
+                <div className="prev-next-btn">
+                    <div className="prev-btn-extra">
+                       <a href="#"><i className="ri-arrow-left-fill"></i></a> 
+                    </div>
+                    <div className="next-btn-extra">
+                        <a href="#"><i className="ri-arrow-right-fill"></i></a>
+                    </div>
+                </div>
             </div>
         </>
     )

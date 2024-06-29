@@ -2239,6 +2239,36 @@ body {
   /* left: -25vw; */
 }
 
+.prev-next-btn{
+  height: auto;
+  width:10%;
+  margin: auto;
+  padding-top: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.next-btn-extra a{
+  text-decoration: none;
+  color: #f8f7e5;
+  font-size: 20px;
+  padding: 7px 7px;
+  border-radius: 50%;
+  border: 1.5px solid #f8f7e5;
+  cursor: pointer;
+}
+
+.prev-btn-extra a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #f8f7e5;
+  font-size: 20px;
+  padding: 7px 7px;
+  border-radius: 50%;
+  border: 1.5px solid #f8f7e5;
+}
+
 .first-relative{
   position: relative;
   height: 100vh;
