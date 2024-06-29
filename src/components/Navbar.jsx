@@ -1,6 +1,17 @@
 import { PropTypes } from "prop-types";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 
 export default function Navbar(props) {
+
+  useGSAP(()=>{
+    gsap.from(".link , .logo , .btn , .cart ,.hamburger" , {
+      y: -100,
+      duration: 0.8,
+      stagger:0.1
+    })
+  })
   return (
     <>
       <div className="navbar">

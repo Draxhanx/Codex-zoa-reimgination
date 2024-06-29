@@ -8,8 +8,11 @@ import Page4 from "./components/Page4";
 import RoundedText from "./components/RoundedText";
 import Page5 from "./components/Page5";
 import Page6 from "./components/Page6";
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
+//  const locomotiveScroll = new LocomotiveScroll();
+ 
   const themeColors = ["#f7931a", "#7ecf86", "#f9a730", "#019735", "#9A5D2A"];
 
   const canImages = [

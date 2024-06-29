@@ -1,5 +1,11 @@
 import { PropTypes } from "prop-types";
 import { useState } from "react";
+import gsap from "gsap";
+// import { scrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Page2(props) {
   const [value, setValue] = useState(1);
@@ -41,6 +47,59 @@ export default function Page2(props) {
     }
   }
 
+  useGSAP(() => {
+    gsap.from(".leftside ,.discover ,.flavour ,.ingrediants,.neat-weight", {
+      x: -600,
+     stagger: 0.3,
+      duration: 0.8,
+      ease: "power1.out",
+     
+     
+      scrollTrigger: {
+        trigger: ".page2",
+        scroller:"body",
+        // markers:true,
+        // start: "top 60%",
+        // end:"top 30%",
+      },
+    });
+    gsap.from(".middle ,.dicover-btn,.extra-info,.heading-p,.ingrediants,.neat-weight", {
+      y: 200,
+      opacity:0,
+      ease: "power1.out",
+      
+     stagger: 0.3,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: ".page2",
+        scroller:"body"
+      },
+    });
+
+    gsap.from(".strawberry2",{
+      x:200,
+      duration: 0.8,
+      delay:0.2,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: ".page2",
+        scroller:"body"
+      },
+      
+    })
+   
+    gsap.from(".name",{
+      y:200,
+      opacity:-1,
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: ".page2",
+        scroller:"body"
+      },
+      
+    })
+  });
+
   return (
     <>
       <div className="page2">
@@ -81,7 +140,7 @@ export default function Page2(props) {
                   DRINK.
                 </p>
               </div>
-              <h4>
+              <h4 className="h4p">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Blanditiis quibusdam, debitis expedita ratione voluptate veniam
                 amet, obcaecati dicta dolor, dolorum impedit ea rerum maxime

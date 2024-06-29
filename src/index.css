@@ -417,6 +417,7 @@ body {
   height: 100%;
   padding-left: 2vw;
   margin-left: 7vw;
+  
 }
 
 .heading-p {
@@ -745,6 +746,7 @@ body {
   backdrop-filter: blur(2px);
   position: absolute;
 }
+
 
 .berry-hover-con {
   height: 100vh;

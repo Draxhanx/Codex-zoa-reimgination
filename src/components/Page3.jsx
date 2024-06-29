@@ -1,6 +1,45 @@
 import { PropTypes } from "prop-types";
+import gsap from "gsap";
+// import { scrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 function Page3(props) {
+  useGSAP(() => {
+    gsap.from(".page3-heading", {
+      y: -150,
+      opacity: -1,
+      scrollTrigger: {
+        trigger: ".page3",
+        scroller: "body",
+      },
+    });
+    gsap.from(".cherry1 ,.orange1,.grape1,.pinapple1,.berry", {
+      x: 300,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.3,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: ".page3",
+        scroller: "body",
+      },
+    });
+  });
+
+//  useEffect(()=>{
+ 
+// // console.log(berry);
+//  },[])
+
+//  const berry = document.querySelector(".page3-heading")
+//  berry.addEventListener("click", (e)=>{
+//   console.log(e)
+// })
+
+
   return (
     <>
       <div className="page3" style={props.page3}>
@@ -13,7 +52,7 @@ function Page3(props) {
               <div className="images-con">
                 <div className="img-con-2">
                   <div className="berry">
-                    <img src="Images/BERRY.png" alt="" />
+                    <img className="1" src="Images/BERRY.png" alt="" />
                   </div>
                   <div className="cherry1">
                     <img src="Images/cherry.png" alt="" />
